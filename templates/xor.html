@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>XOR Cryptor</title>
+        <style type="text/css">
+    
+            html, body {
+              background-color: #F2F2F2
+            }
+
+            h1 {
+                text-align: center;
+            }
+      
+            .large-text-box {
+              color: #000000;
+              border: 2px black;
+              padding: 0;
+              width: 100%;
+              height: 40%;
+              font-size: 24px;
+              background-color: #FFFFFF;
+              outline: none;
+            }
+
+            .key-text-box {
+                color: #000000;
+                border: 2px black;
+                padding: 0;
+                width: 90%;
+                font-size: 24px;
+                background-color: #ffffff;
+                outline: none
+            }
+      
+            input[type=submit] {
+                width: 80%;
+            }
+      
+            .submit {
+              box-shadow: 0px 8px 12px -7px #0d0d0d;
+              background:linear-gradient(to bottom, #4573e8 5%, #033a69 100%);
+              background-color:#4573e8;
+              border-radius:41px;
+              display:inline-block;
+              cursor:pointer;
+              color:#ffffff;
+              font-family:Arial;
+              font-size:20px;
+              font-weight:bold;
+              padding:13px 38px;
+              text-decoration:none;
+              text-shadow:-1px 2px 3px #030405;
+              text-align: center;
+              display: block;
+              margin: 10px 10%;
+              }
+          .submit:hover {
+              background:linear-gradient(to bottom, #033a69 5%, #4573e8 100%);
+              background-color:#033a69;
+          }
+          .submit:active {
+              position:relative;
+              top:1px;
+          }
+      
+          </style>
+    </head>
+    <main>
+        <h1>XOR Cryptor</h1>
+        <form action='/xor/' method='post'>
+            <textarea name='data-input' id='data-input' class='large-text-box' rows='10'>{{decrypted}}</textarea>
+            Passphrase: <input type='text' name='key' id='key-input' class='key-text-box' value="{{key}}"/><br/>
+            <input type='submit' name='crypt' id='crypt-button' class='submit' value='Encrypt/Decrypt' />
+            <textarea type='text' name='data-output' id='data-output' class='large-text-box' rows='10'>{{encrypted}}</textarea>
+        </form>
+
+    </main>
+</html>
